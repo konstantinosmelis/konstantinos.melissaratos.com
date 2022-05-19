@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# konstantinos.melissaratos.com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal website build using [React](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

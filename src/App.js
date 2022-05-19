@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/home.js';
+
+import NavigationBar from './components/NavigationBar.js';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [links, setLinks] = useState([
+        // {name: "Home", path: "/"},
+        // {name: "Contact", path: "/contact"}
+    ]);
+
+    return (
+        <div className="App">
+            <Router>
+                <NavigationBar navLinks={links}/>
+                <Routes>
+                    <Route exact path="/" exact element={<Home/>}/>
+                </Routes>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
