@@ -1,0 +1,11 @@
+.card-title {
+    color: var(--text-primary);
+    font-size: 18px;
+}
+
+.card-logo {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+

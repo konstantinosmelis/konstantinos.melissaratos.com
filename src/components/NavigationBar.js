@@ -1,12 +1,9 @@
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { brands, solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
-function NavigationBar({navLinks}) {
+function NavigationBar({navLinks = [], theme, setTheme}) {
     const createLinks = navLinks.map((link, i) => {
         return (
             <LinkContainer key={i} to={link.path}>
@@ -15,26 +12,26 @@ function NavigationBar({navLinks}) {
         );
     });
 
+    const logo = theme === 'dark' ? '/images/logo_white.png' : '/images/logo_black.png';
+
     return (
-        <Navbar expand="lg" variant="dark" style={{fontSize:'20px', zIndex: "2"}}>
+        <Navbar variant={theme}>
             <Container>
                 <Navbar.Brand>
-                    <img src="/images/logo_white.png" width="200"/>{' '}
+                    <img src={ logo } width="200" alt="melislogo"/>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll"/>
-                <Container fluid>
-                    <Navbar.Collapse id="nav-scroll">
-                        <Nav className="ms-auto">
-                            { createLinks }
-                            <a className="nav-link" href="https://github.com/konstantinosmelis" target="_blank">
-                                <FontAwesomeIcon icon={brands("github")}/>
-                            </a>
-                            <a className="nav-link" href="https://gitlab.com/konstantinosmelis" target="_blank">
-                                <FontAwesomeIcon icon={brands("gitlab")}/>
-                            </a>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Container>
+                <Nav className="ms-auto">
+                    { createLinks }
+                    <Nav.Link href="https://github.com/konstantinosmelis" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={brands('github')}/>
+                    </Nav.Link>
+                    <Nav.Link href="https://gitlab.com/konstantinosmelis" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={brands('gitlab')}/>
+                    </Nav.Link>
+                    <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} style={{background: 'transparent'}}>
+                        <FontAwesomeIcon className="nav-link" icon={theme === 'dark' ? solid('sun') : solid('moon')}/>
+                    </Button>
+                </Nav>
             </Container>
         </Navbar>
     );

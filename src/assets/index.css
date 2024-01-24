@@ -9,21 +9,5 @@ body {
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
-/* landing-page */
-.landing-page-typewriter {
-    font-size: 70px;
-    line-height: 78px;
-    font-weight: 400;
-}
-
-@media (max-width: 544px) {  
-    .landing-page-typewriter {
-        font-size: 55px;
-        line-height: 78px;
-        font-weight: 400;
-    }
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

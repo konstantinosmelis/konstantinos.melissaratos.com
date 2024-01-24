@@ -1,28 +1,28 @@
-import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import useLocalStorage from 'use-local-storage';
 
-import Home from './pages/home.js';
-
+import Home from './pages/Home.js';
 import NavigationBar from './components/NavigationBar.js';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import './App.css';
+import './assets/index.css';
+import './assets/App.css';
+import './assets/NavigationBar.css';
+import './assets/Landing.css';
+import './assets/Projects.css';
 
 function App() {
-    const [links, setLinks] = useState([
-        // {name: "Home", path: "/"},
-        // {name: "Contact", path: "/contact"}
-    ]);
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
     return (
-        <div className="App">
-            <Router>
-                <NavigationBar navLinks={links}/>
-                <Routes>
-                    <Route exact path="/" exact element={<Home/>}/>
-                </Routes>
-            </Router>
+        <div className="App" data-theme={theme}>
+            <NavigationBar theme={theme} setTheme={setTheme}/>
+                <Router>
+                    <Routes>
+                        <Route exact path="/" element={<Home theme={theme}/>}/>
+                    </Routes>
+                </Router>
         </div>
     );
 }

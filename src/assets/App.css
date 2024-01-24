@@ -1,4 +1,20 @@
+:root {
+    --background: white;
+    --text-primary: rgb(29, 29, 29);
+}
+
+[data-theme="dark"] {
+    --background: rgb(29, 29, 29);
+    --text-primary: white;
+}
+
 /* Classes */
+.App {
+    background: var(--background);
+    color: var(--text-primary);
+    transition: all .5s;
+}
+
 .whitespace {
 	margin: 30px;
 	display: block;
@@ -9,6 +25,7 @@
 	font-size: 3rem;
 	color: #08fdd8;
 	line-height: 1;
+    margin-top: 1cm;
 }
 
 .skill-item {
@@ -30,9 +47,4 @@
 .img-fluid {
     max-width: 50px;
     height: auto;
-}
-
-body {
-    background-color: rgb(29, 29, 29);
-    color: #e2e2e2;
 }
