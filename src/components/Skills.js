@@ -78,7 +78,19 @@ function Skills() {
                     <Badge bg="danger" text='dark' style={{float: "right", fontFamily: "farid"}}>SKILLED</Badge>
                 </Col>
                 <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">REACT JS</div>
+                    <div className="skill-item-name">IMAGE PROCESSING</div>
+                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
+                </Col>
+                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
+                    <div className="skill-item-name">SIGNAL PROCESSING</div>
+                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
+                </Col>
+                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
+                    <div className="skill-item-name">MACHINE LEARNING</div>
+                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
+                </Col>
+                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
+                    <div className="skill-item-name">COMPUTER VISION</div>
                     <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>BEGINER</Badge>
                 </Col>
             </Row>
