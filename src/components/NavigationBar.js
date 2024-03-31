@@ -18,18 +18,18 @@ function NavigationBar({navLinks = [], theme, setTheme}) {
         <Navbar variant={theme}>
             <Container>
                 <Navbar.Brand>
-                    <img src={ logo } width="200" alt="melislogo"/>
+                    <img src={ logo } width='200' alt='melislogo'/>
                 </Navbar.Brand>
-                <Nav className="ms-auto">
+                <Nav className='ms-auto'>
                     { createLinks }
-                    <Nav.Link href="https://github.com/konstantinosmelis" target="_blank" rel="noreferrer">
+                    <Nav.Link href='https://github.com/konstantinosmelis' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={brands('github')}/>
                     </Nav.Link>
-                    <Nav.Link href="https://gitlab.com/konstantinosmelis" target="_blank" rel="noreferrer">
+                    <Nav.Link href='https://gitlab.com/konstantinosmelis' target='_blank' rel='noreferrer'>
                         <FontAwesomeIcon icon={brands('gitlab')}/>
                     </Nav.Link>
                     <Button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} style={{background: 'transparent'}}>
-                        <FontAwesomeIcon className="nav-link" icon={theme === 'dark' ? solid('sun') : solid('moon')}/>
+                        <FontAwesomeIcon className='nav-link' icon={theme === 'dark' ? solid('sun') : solid('moon')}/>
                     </Button>
                 </Nav>
             </Container>

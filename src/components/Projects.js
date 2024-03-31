@@ -1,92 +1,108 @@
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Text, Grid, Box, Card, Flex, Avatar } from '@radix-ui/themes';
 
 function Projects({theme}) {
-    const background = theme === 'dark' ? 'dark' : 'light';
-    const text = theme === 'dark' ? 'light' : 'dark';
-
     return (
-        <Container>
-            <div className="title"><strong>Projects</strong></div>
-            <Row style={{marginTop: "35px", marginBottom: "35px"}}>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src={'/images/tree_' + (theme === 'light' ? 'black' : 'white') + '.png'} className="img-fluid company-logo card-logo" alt="huffmantree"/>
-                                <strong>Huffman Compressor</strong>
-                                <a href="https://github.com/konstantinosmelis/huffman_compressor" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+        <Container style={{marginTop: '1cm'}}>
+            <Text color='indigo' weight='bold' size='8'>Projects</Text>
+            <Grid style={{marginTop: '35px', marginBottom: '35px'}} columns={{sm: '1', md: '2', lg: '3'}} gap='5' rows='1' width='auto'>
+                <Box>
+                    <Card asChild>
+                        <a href='https://github.com/konstantinosmelis/huffman_compressor' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/tree_' + (theme === 'light' ? 'black' : 'white') + '.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>Huffman Compressor</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src="/images/bee.png" className="img-fluid company-logo card-logo" alt="superbee"/>
-                                <strong>SuperBee</strong>
-                                <a href="https://gitlab.com/jules_cassan/ter-s6-sociometrie-des-abeilles" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+                </Box>
+                <Box>
+                    <Card asChild>
+                        <a href='https://gitlab.com/jules_cassan/ter-s6-sociometrie-des-abeilles' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/bee.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>SuperBee</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src="/images/reddit.png" className="img-fluid company-logo card-logo" alt="redditscrapping"/>
-                                <strong>Reddit Scrapping</strong>
-                                <a href="https://github.com/konstantinosmelis/reddit_scrapping" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+                </Box>
+                <Box>
+                    <Card asChild>
+                        <a href='https://github.com/konstantinosmelis/reddit_scrapping' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/reddit.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>Reddit Scrapping</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src="/images/naturalevent.png" className="img-fluid company-logo card-logo" alt="naturaleventfinder"/>
-                                <strong>Natural Event Finder</strong>
-                                <a href="https://github.com/konstantinosmelis/natural-event-finder" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+                </Box>
+                <Box>
+                    <Card asChild>
+                        <a href='https://github.com/konstantinosmelis/natural-event-finder' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/naturalevent.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>Natural Event Finder</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src="/images/mysqlapi.png" className="img-fluid company-logo card-logo" alt="mysqljavaapi"/>
-                                <strong>MySql java API</strong>
-                                <a href="https://github.com/konstantinosmelis/java-sql-api" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+                </Box>
+                <Box>
+                    <Card asChild>
+                        <a href='https://github.com/konstantinosmelis/java-sql-api' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/mysqlapi.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>MySql java API</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-                <Col sm={12} md={4} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Card bg={background} border={text}>
-                        <Card.Body>
-                            <Card.Title>
-                                <img src="/images/image_processor.png" className="img-fluid company-logo card-logo" alt="mysqljavaapi"/>
-                                <strong>Image Processing App</strong>
-                                <a href="https://github.com/konstantinosmelis/projet-informatique" target="_blank" rel="noreferrer">
-                                    <Button variant="outline-primary" style={{float: "right"}}>Source code</Button>
-                                </a>
-                            </Card.Title>
-                        </Card.Body>
+                </Box>
+                <Box>
+                    <Card asChild>
+                        <a href='https://github.com/konstantinosmelis/projet-informatique' target='_blank' rel='noreferrer'>
+                            <Flex gap='3' align='center'>
+                                <Avatar
+                                    size='3'
+                                    src={'/images/image_processor.png'}
+                                    fallback='T'
+                                />
+                                <Box>
+                                    <Text as='div' size='3' weight='bold'>Image Processing App</Text>
+                                </Box>
+                            </Flex>
+                        </a>
                     </Card>
-                </Col>
-            </Row>
+                </Box>
+            </Grid>
         </Container>
     );
 }

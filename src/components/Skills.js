@@ -1,99 +1,170 @@
-import { Container, Row, Col, ProgressBar, Badge } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Text, Box, Grid, Progress, Card, Flex, Badge } from '@radix-ui/themes';
 
 function Skills() {
     return (
-        <Container>
-            <div className="title"><strong>Skills</strong></div>
-            <Row>
-                <Col sm={12} style={{marginTop: "35px", marginBottom: "35px"}}>
-                    <div className="skill-item-name" style={{color: "rgb(45, 75, 89)"}}><strong>LANGUAGES</strong></div>
-                    <ProgressBar style={{width: "100%", backgroundColor: "rgb(45, 75, 89)", marginTop: "10px", height: "3px"}}></ProgressBar>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">GREEK</div>
-                    <Badge bg="danger" text='dark' style={{float: "right", fontFamily: "farid"}}>NATIVE LANGUAGE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">FRENCH</div>
-                    <Badge bg="danger" text='dark' style={{float: "right", fontFamily: "farid"}}>SECOND LANGUAGE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">ENGLISH</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>FLUENT</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">SPANISH</div>
-                    <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col sm={12} style={{marginTop: "35px", marginBottom: "35px"}}>
-                    <div className="skill-item-name" style={{color: "rgb(45, 75, 89)"}}><strong>PROGRAMMING LANGUAGES</strong></div>
-                    <ProgressBar style={{width: "100%", backgroundColor: "rgb(45, 75, 89)", marginTop: "10px", height: "3px"}}></ProgressBar>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">PYTHON</div>
-                    <Badge bg="danger" text='dark' style={{float: "right", fontFamily: "farid"}}>SKILLED</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">JAVA</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">PHP</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">C/C++</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">MATLAB</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">RUBY</div>
-                    <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>BEGINER</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">JAVASCRIPT</div>
-                    <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>BEGINER</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">RUST</div>
-                    <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>BEGINER</Badge>
-                </Col>
-            </Row>
-
-            <Row>
-                <Col sm={12} style={{marginTop: "35px", marginBottom: "35px"}}>
-                    <div className="skill-item-name" style={{color: "rgb(45, 75, 89)"}}><strong>OTHERS</strong></div>
-                    <div className="progress" style={{marginTop: "10px", height: "3px"}}>
-                        <div className="progress-bar" style={{width: "100%", backgroundColor: "rgb(45, 75, 89)"}}></div>
-                    </div>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">RELATIONNAL DATABASES</div>
-                    <Badge bg="danger" text='dark' style={{float: "right", fontFamily: "farid"}}>SKILLED</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">IMAGE PROCESSING</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">SIGNAL PROCESSING</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">MACHINE LEARNING</div>
-                    <Badge bg="warning" text='dark' style={{float: "right", fontFamily: "farid"}}>ITERMEDIATE</Badge>
-                </Col>
-                <Col sm={12} md={6} lg={4} style={{marginBottom: "7px"}}>
-                    <div className="skill-item-name">COMPUTER VISION</div>
-                    <Badge bg="light" text='dark' style={{float: "right", fontFamily: "farid"}}>BEGINER</Badge>
-                </Col>
-            </Row>
+        <Container style={{marginTop: '1cm'}}>
+            <Text color='indigo' weight='bold' size='8'>Skills</Text>
+            <Box>
+                <div style={{marginTop: '35px', marginBottom: '35px'}}>
+                    <Text color='indigo' weight='bold' size='2'>LANGUAGES</Text>
+                    <Progress style={{marginTop: '10px', height: '3px'}} value={100} radius='none' color='indigo'/>
+                </div>
+                <Grid columns={{sm: '1', md: '2', lg: '3'}} gapX='5' gapY='2' rows='1' width='auto'>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>GREEK</Text>
+                                <Badge color='red' variant='solid' style={{marginLeft: 'auto'}}>NATIVE LANGUAGE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>FRENCH</Text>
+                                <Badge color='red' variant='solid' style={{marginLeft: 'auto'}}>SECOND LANGUAGE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>ENGLISH</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>FLUENT</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>SPANISH</Text>
+                                <Badge color='white' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                </Grid>
+            </Box>
+            <Box>
+                <div style={{marginTop: '35px', marginBottom: '35px'}}>
+                    <Text color='indigo' weight='bold' size='2'>PROGRAMMING LANGUAGES</Text>
+                    <Progress style={{marginTop: '10px', height: '3px'}} value={100} radius='none' color='indigo'/>
+                </div>
+                <Grid columns={{sm: '1', md: '2', lg: '3'}} gapX='5' gapY='2' width='auto'>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>PYTHON</Text>
+                                <Badge color='red' variant='solid' style={{marginLeft: 'auto'}}>SKILLED</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>JAVA</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>PHP</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>C/C++</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>JAVASCRIPT</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>MATLAB</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>RUBY</Text>
+                                <Badge color='white' variant='solid' style={{marginLeft: 'auto'}}>BEGINNER</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>RUST</Text>
+                                <Badge color='white' variant='solid' style={{marginLeft: 'auto'}}>BEGINNER</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                </Grid>
+            </Box>
+            <Box>
+                <div style={{marginTop: '35px', marginBottom: '35px'}}>
+                    <Text color='indigo' weight='bold' size='2'>OTHERS</Text>
+                    <Progress style={{marginTop: '10px', height: '3px'}} value={100} radius='none' color='indigo'/>
+                </div>
+                <Grid columns={{sm: '1', md: '2', lg: '3'}} gapX='5' gapY='2' width='auto'>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>RELATIONAL DATABASES</Text>
+                                <Badge color='red' variant='solid' style={{marginLeft: 'auto'}}>SKILLED</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>IMAGE PROCESSING</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>SIGNAL PROCESSING</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>MACHINE LEARNING</Text>
+                                <Badge color='amber' variant='solid' style={{marginLeft: 'auto'}}>INTERMEDIATE</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                    <Box>
+                        <Card variant='ghost'>
+                            <Flex gap='3' align='center'>
+                                <Text as='div' size='2' weight='bold'>COMPUTER VISION</Text>
+                                <Badge color='white' variant='solid' style={{marginLeft: 'auto'}}>BEGINNER</Badge>
+                            </Flex>
+                        </Card>
+                    </Box>
+                </Grid>
+            </Box>
         </Container>
     );
 }

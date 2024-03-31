@@ -16,8 +16,8 @@ function Landing() {
 
     return (
         <Container style={{height: '100vh'}}>
-            <Row className='justify-content-center align-items-center' style={{height: "100%"}}>
-                <Col md={10} sm={12} className='justify-content-center' style={{textAlign: "center"}}>
+            <Row className='justify-content-center align-items-center' style={{height: '100%'}}>
+                <Col md={10} sm={12} className='justify-content-center' style={{textAlign: 'center'}}>
                     <TypeWriter
                         onInit={(typewriter) => {
                             typewriter.typeString(welcome)

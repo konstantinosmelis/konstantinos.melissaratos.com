@@ -1,35 +1,44 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Text, Grid, Box, Card, Flex, Avatar } from '@radix-ui/themes';
 
 function Education({theme}) {
     return (
-        <Container>
-            <div className="title"><strong>Education</strong></div>
-            <Row style={{marginTop: "35px", marginBottom: "35px"}}>
-                <Col sm={12} md={6} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Row>
-                        <Col sm={2} className="d-none d-md-block">
-                            <img style={{width: "50px", height: "50px", float: "right"}} src="/images/um_logo.png" className="img-fluid company-logo" alt="umontpellier"/>
-                        </Col>
-                        <Col sm={10}>
-                            <h5 style={{fontSize: "13pt"}}>Faculté des Sciences - Univesité de Montpellier</h5>
-                            <h6 style={{fontSize: "12pt"}}>Bachelor's degree - Computer Science</h6>
-                            <h6 className="showTime" style={{fontFamily: "farid"}}>2019 - 2022</h6>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col sm={12} md={6} style={{marginTop: "10px", marginBottom: "10px"}}>
-                    <Row>
-                        <Col sm={2} className="d-none d-md-block">
-                            <img style={{width: "50px", height: "50px", float: "right"}} src={'/images/ut_logo_' + (theme === 'light' ? 'black' : 'white') + '.png'} className="img-fluid company-logo" alt="utoulouse3"/>
-                        </Col>
-                        <Col sm={10}>
-                            <h5 style={{fontSize: "13pt"}}>Faculté des Sciences et Ingénieurie - Univesité de Toulouse III</h5>
-                            <h6 style={{fontSize: "12pt"}}>Master's degree - Signal and image processing and machine learning</h6>
-                            <h6 className="showTime" style={{fontFamily: "farid"}}>2022 - present</h6>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+        <Container style={{marginTop: '1cm'}}>
+            <Text color='indigo' weight='bold' size='8'>Education</Text>
+            <Grid style={{marginTop: '35px', marginBottom: '35px'}} columns={{sm: '1', md: '2'}} gap='5' rows='1' width='auto'>
+                <Box>
+                    <Card>
+                        <Flex gap='3' align='center'>
+                            <Avatar
+                                size='4'
+                                src={'/images/um_logo.png'}
+                                fallback='T'
+                            />
+                            <Box>
+                                <Text as='div' size='3' weight='bold'>Faculté des Sciences - Université de Montpellier</Text>
+                                <Text as='div' size='3' weight='regular'>Bachelor's degree - Computer Science</Text>
+                                <Text as='div' size='3' weight='light' color='gray'><i>2019 - 2022</i></Text>
+                            </Box>
+                        </Flex>
+                    </Card>
+                </Box>
+                <Box>
+                    <Card>
+                        <Flex gap='3' align='center'>
+                            <Avatar
+                                size='4'
+                                src={'/images/ut_logo_' + (theme === 'light' ? 'black' : 'white') + '.png'}
+                                fallback='T'
+                            />
+                            <Box>
+                                <Text as='div' size='3' weight='bold'>Faculté des Sciences et Ingénierie - Université de Toulouse III</Text>
+                                <Text as='div' size='3' weight='regular'>Master's degree - Signal and image processing and machine learning</Text>
+                                <Text as='div' size='3' weight='light' color='gray'><i>2022 - present</i></Text>
+                            </Box>
+                        </Flex>
+                    </Card>
+                </Box>
+            </Grid>
         </Container>
     );
 }

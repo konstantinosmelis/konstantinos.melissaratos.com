@@ -14,37 +14,3 @@
     color: var(--text-primary);
     transition: all .5s;
 }
-
-.whitespace {
-	margin: 30px;
-	display: block;
-	width: 100%;
-}
-
-.title {
-	font-size: 3rem;
-	color: #08fdd8;
-	line-height: 1;
-    margin-top: 1cm;
-}
-
-.skill-item {
-    display: inline;
-    font-size: 14pt;
-    margin-bottom: 8px;
-    font-family: "farid";
-    letter-spacing: 1px;
-}
-
-.skill-item-name {
-    display: inline;
-    font-size: .8rem;
-    margin-bottom: 8px;
-    font-family: "farid";
-    letter-spacing: 2px;
-}
-
-.img-fluid {
-    max-width: 50px;
-    height: auto;
-}
