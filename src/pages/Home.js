@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types'
 import Landing from '../components/Landing.js';
 import Skills from '../components/Skills.js';
 import Projects from '../components/Projects.js';
@@ -19,5 +20,9 @@ function Home({theme}) {
         </div>
     );
 };
+
+Home.propTypes = {
+    theme: PropTypes.string.isRequired
+}
 
 export default Home;

@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types'
 import { Container } from 'react-bootstrap';
 import { Text, Grid, Box, Card, Flex, Avatar } from '@radix-ui/themes';
 
@@ -41,6 +42,10 @@ function Education({theme}) {
             </Grid>
         </Container>
     );
+}
+
+Education.propTypes = {
+    theme: PropTypes.string.isRequired
 }
 
 export default Education;

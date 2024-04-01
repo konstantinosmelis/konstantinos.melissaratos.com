@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types'
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -35,6 +36,12 @@ function NavigationBar({navLinks = [], theme, setTheme}) {
             </Container>
         </Navbar>
     );
+}
+
+NavigationBar.propTypes = {
+    navLinks: PropTypes.array.isRequired,
+    theme: PropTypes.string.isRequired,
+    setTheme: PropTypes.func.isRequired
 }
 
 export default NavigationBar;

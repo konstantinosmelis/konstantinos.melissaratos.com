@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types'
 import { Col, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { brands } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -30,6 +31,10 @@ function Footer({theme}) {
             </Col>
         </footer>
     );
+}
+
+Footer.propTypes = {
+    theme: PropTypes.string.isRequired
 }
 
 export default Footer;
